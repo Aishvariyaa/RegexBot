@@ -2,16 +2,15 @@ import re
 import random
 
 def simple_chatbot(user_input):
-    user_input = user_input.lower()  # Convert input to lowercase for easier matching
+    user_input = user_input.lower()  
     
-    # Define more specific patterns and responses
     greetings = r"hello|hi|hey|greetings"
     farewells = r"bye|goodbye|see you later"
     questions = r"how are you\??|what is your name\??|who created you\??"
     weather_query = r"weather|forecast"
     time_query = r"time|current time|clock"
     
-    # Elaborate responses for specific queries
+
     weather_responses = ["Sure, I can check the weather for you. Where are you located?",
                          "Would you like the weather forecast for a specific location?"]
     time_responses = ["The current time is 10:00 AM.", 
@@ -46,3 +45,4 @@ while True:
     else:
         response = simple_chatbot(user_text)
         print("Chatbot:", response)
+
